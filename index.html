@@ -100,7 +100,35 @@ align-items:center;
 font-size:30px;
 color:white;
 }
+.photo{
+    position:absolute;
+    top:50%;
+    width:80px;
+    height:100px;
+    transform:translateY(-50%);
+    overflow:hidden;
+    border-radius:10px;
+    border:2px solid white;
+    z-index:1;
+}
 
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.photo.left{
+    left:20px;
+}
+
+.photo.right{
+    right:20px;
+}
+
+.heart{
+    z-index:2;
+}
 .letter{
 display:none;
 margin-top:25px;
@@ -150,7 +178,18 @@ to{opacity:1;transform:translateY(0);}
 <img src="giphy.gif" class="cat" alt="Dancing Cat">
 
 <div class="envelope" onclick="openLetter()">
-<div class="heart">❤</div>
+
+    <div class="photo left">
+        <img src="Screenshot_20260627-170430.png" alt="Her">
+    </div>
+
+    <div class="photo right">
+        <img src="Screenshot_20260627-170242.png" alt="Me">
+    </div>
+
+    <div class="heart">🤍</div>
+
+</div>
 </div>
 
 <div class="letter" id="letter">
