@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Noor ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffe4ec,#fff0f5,#f8e8ff);
+}
+
+.container{
+text-align:center;
+padding:25px;
+max-width:380px;
+animation:fade 1.2s;
+}
+
+.badge{
+display:inline-block;
+padding:10px 25px;
+background:white;
+border-radius:30px;
+box-shadow:0 8px 20px rgba(255,120,170,.15);
+color:#b65b7b;
+font-size:13px;
+letter-spacing:2px;
+margin-bottom:25px;
+}
+
+h1{
+font-size:42px;
+color:#3d2a36;
+}
+
+h2{
+font-family:"Dancing Script",cursive;
+font-size:36px;
+color:#d77a9f;
+margin-bottom:30px;
+}
+
+.cat{
+font-size:80px;
+animation:bounce 1s infinite;
+margin-bottom:40px;
+}
+
+.envelope{
+width:280px;
+height:180px;
+background:#fff3e5;
+border:3px solid #c49772;
+border-radius:12px;
+margin:auto;
+position:relative;
+cursor:pointer;
+transition:.4s;
+}
+
+.envelope:before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+border-top:3px solid #c49772;
+border-left:3px solid #c49772;
+transform:skewY(34deg);
+transform-origin:top left;
+}
+
+.heart{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:70px;
+height:70px;
+background:#ff9db8;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+color:white;
+}
+
+.letter{
+display:none;
+margin-top:25px;
+padding:20px;
+background:white;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+color:#555;
+line-height:1.8;
+animation:fade 1s;
+}
+
+button{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+background:#ff8fb1;
+color:white;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+}
+
+@keyframes bounce{
+50%{transform:translateY(-10px);}
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="badge">
+💗 MADE WITH SO MUCH LOVE
+</div>
+
+<h1>Hello Noor ❤️</h1>
+
+<h2>Happy Birthday</h2>
+
+<div class="cat">🐱</div>
+
+<div class="envelope" onclick="openLetter()">
+<div class="heart">❤</div>
+</div>
+
+<div class="letter" id="letter">
+
+<h2>My Love ❤️</h2>
+
+<p>
+
+Happy Birthday to the most beautiful person in my life.
+
+Thank you for bringing happiness into my world.
+
+I pray Allah blesses you with endless happiness, success, good health and every dream you wish for.
+
+No matter where life takes us, I'll always choose you.
+
+I love you more than words can ever explain.
+
+Happy Birthday, My Noor. ❤️
+
+</p>
+
+<button onclick="playMusic()">Play Song 🎵</button>
+
+</div>
+
+<audio id="song" src="your-song.mp3"></audio>
+
+</div>
+
+<script>
+
+function openLetter(){
+document.querySelector(".letter").style.display="block";
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+}
+
+function playMusic(){
+document.getElementById("song").play();
+}
+
+</script>
+
+</body>
+</html>
